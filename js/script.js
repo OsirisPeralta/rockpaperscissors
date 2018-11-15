@@ -4,8 +4,27 @@
 
 //GLOBAL VARIABLES
 /* global $ */
-
+var userChoice = "";
+var computerChoice = ""; 
+var winner = "";
+var randomNumber = 0;
 
 
 // DOCUMENT READY FUNCTION BELOW
+
+$("#shoot").click(function(){
+    var userChoice = $("#input").val();
+    $("#userChoice").text(userChoice);
+    randomNumber = Math.random();
+    if(randomNumber < .33){
+        computerChoice = "rock";
+    }
+    else if(randomNumber > .33 && randomNumber < .66){
+        computerChoice = "paper";
+    }
+    else {
+        computerChoice = "scissors";
+    }
+    $("#computerChoice").text(computerChoice);
+});
 
