@@ -26,5 +26,28 @@ $("#shoot").click(function(){
         computerChoice = "scissors";
     }
     $("#computerChoice").text(computerChoice);
+    
+    if (userChoice === computerChoice) {
+        alert ("draw!");
+    }
+    else if(userChoice === "rock" && computerChoice === "paper"){
+        alert ("You lose!")
+    }
+    else if(userChoice === "rock" && computerChoice === "scissors"){
+        alert ("You win!")
+    }
+    else if(userChoice === "paper" && computerChoice === "scissors"){
+        alert ("You lose!")
+    }
+    else if(userChoice === "paper" && computerChoice === "rock"){
+        alert ("You win!")
+    }
+    else if(userChoice === "scissors" && computerChoice === "rock"){
+        alert ("You lose!")
+    }
+    else if(userChoice === "scissors" && computerChoice === "paper"){
+        alert ("You win!")
+    }
 });
+
 
